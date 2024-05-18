@@ -4,11 +4,15 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BackgroundLoading from './screens/BackgroundLoading';
 
+const Stack = createNativeStackNavigator();
+
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="BacgroundLoading" component={BackgroundLoading} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
