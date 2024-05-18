@@ -9,7 +9,10 @@ const BackgroundLoading = () => {
         hidden={false}
         backgroundColor="#f7d200f8"
       />
-      <Image source={require('../assets/images/Picture_1.png')} />
+      <Image
+        source={require('../assets/images/Picture_1.png')}
+        style={{width: 350, height: 350}}
+      />
     </View>
   );
 };
