@@ -1,10 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StatusBar, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 const BackgroundLoading = () => {
   return (
     <View style={styles.Bgd}>
-      <Text />
+      <StatusBar
+        barStyle="light-content"
+        hidden={false}
+        backgroundColor="#f7d200f8"
+      />
     </View>
   );
 };
