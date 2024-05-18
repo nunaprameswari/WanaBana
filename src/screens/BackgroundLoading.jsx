@@ -1,4 +1,4 @@
-import {StatusBar, StyleSheet, Text, View} from 'react-native';
+import {Image, StatusBar, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 const BackgroundLoading = () => {
@@ -9,6 +9,7 @@ const BackgroundLoading = () => {
         hidden={false}
         backgroundColor="#f7d200f8"
       />
+      <Image source={require('../assets/images/Picture_1.png')} />
     </View>
   );
 };
