@@ -3,7 +3,7 @@ import React from 'react';
 
 const BackgroundLoading = ({navigation}) => {
   setTimeout(() => {
-    navigation.replace('Produck');
+    navigation.replace('Beranda');
   }, 4000);
   return (
     <View style={styles.Bgd}>
