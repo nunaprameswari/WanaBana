@@ -1,10 +1,11 @@
 import {Image, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {StackActions} from '@react-navigation/native';
 import React from 'react';
 
 const BackgroundLoading = ({navigation}) => {
   setTimeout(() => {
-    navigation.replace('Beranda');
-  }, 4000);
+    navigation.dispatch(StackActions.replace('Tabbar'));
+  }, 5000);
   return (
     <View style={styles.Bgd}>
       <StatusBar

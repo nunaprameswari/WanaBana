@@ -5,45 +5,22 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import BackgroundLoading from './screens/BackgroundLoading';
-import Beranda from './screens/Beranda';
+import Produck from './screens/Produck';
+import Tabbar from './components/Tabbar';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
-const MenuTab = () => {
-  return (
-    <Tabs.Navigator>
-      <Tabs.Screen
-        name="Beranda"
-        component={Beranda}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({size, color}) => {
-            return (
-              <View>
-                <MaterialCommunityIcons name="Grid" size={size} color={color} />
-              </View>
-            );
-          },
-        }}
-      />
-    </Tabs.Navigator>
-  );
-};
-
-function App() {
+const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Tab"
-          component={MenuTab}
-          options={{headerShown: false}}
-        />
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="BackgroundLoading" component={BackgroundLoading} />
+        <Stack.Screen name="Tabbar" component={Tabbar} />
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
 
 export default App;
 
