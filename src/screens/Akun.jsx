@@ -1,11 +1,16 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import Slideshow from 'react-native-image-slider-show';
 
 const Akun = () => {
   return (
-    <View>
-      <Text>Akun</Text>
-    </View>
+    <Slideshow
+      dataSource={[
+        {url: 'http://placeimg.com/640/480/any'},
+        {url: 'http://placeimg.com/640/480/any'},
+        {url: 'http://placeimg.com/640/480/any'},
+      ]}
+    />
   );
 };
 
