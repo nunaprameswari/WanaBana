@@ -1,7 +1,18 @@
-import {StyleSheet, Text, View, ImageBackground, StatusBar} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  StatusBar,
+  FlatList,
+  Image,
+  Dimensions,
+} from 'react-native';
 import React from 'react';
 
-const Image = [
+const screenWidth = Dimensions.get('window').width;
+
+const carouselData = [
   {
     id: '1',
     image: require('../assets/images/Picture_2.jpg'),
@@ -12,6 +23,14 @@ const Image = [
   },
 ];
 
+const SlideImage = ({item, index}) => {
+  return (
+    <View>
+      <Image source={item.image} style={{height: 200, width: screenWidth}} />
+    </View>
+  );
+};
+
 const Beranda = () => {
   return (
     <View style={styles.bgd}>
@@ -20,11 +39,7 @@ const Beranda = () => {
         hidden={false}
         backgroundColor="#f7d200f8"
       />
-      <ImageBackground
-        source={require('../assets/images/Picture_1.png')}
-        resizeMode="cover"
-        style={styles.image}
-      />
+      <FlatList data={carouselData} renderItem={SlideImage} horizontal={true} />
     </View>
   );
 };
