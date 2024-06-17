@@ -3,6 +3,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BackgroundLoading from './screens/BackgroundLoading';
+import Beranda from './components/Beranda';
 import Produck from './screens/Produck';
 
 const Stack = createNativeStackNavigator();
@@ -12,6 +13,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="BacgroundLoading" component={BackgroundLoading} />
+        <Stack.Screen name="Beranda" component={Beranda} />
         <Stack.Screen name="Produck" component={Produck} />
       </Stack.Navigator>
     </NavigationContainer>
