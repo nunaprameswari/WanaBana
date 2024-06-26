@@ -1,14 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const Akun = () => {
+const Slide = () => {
   return (
     <View>
-      <Text>Akun</Text>
+      <Text>Slide</Text>
     </View>
   );
 };
 
-export default Akun;
+export default Slide;
 
 const styles = StyleSheet.create({});
