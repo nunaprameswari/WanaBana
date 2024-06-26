@@ -1,10 +1,11 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import Slide from '../components/Slide';
 
 const Beranda = () => {
   return (
     <View>
-      <Text>Beranda</Text>
+      <Slide />
     </View>
   );
 };
