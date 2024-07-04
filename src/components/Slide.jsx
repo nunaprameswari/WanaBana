@@ -40,8 +40,7 @@ const Slide = () => {
   };
   return (
     <View>
-      <Text>Slide</Text>
-      <FlatList data={DataPicture} />
+      <FlatList data={DataPicture} renderItem={pictureItem} />
     </View>
   );
 };

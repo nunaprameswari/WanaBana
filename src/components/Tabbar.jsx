@@ -14,8 +14,8 @@ const MenuTab = () => {
   return (
     <Tabs.Navigator>
       <Tabs.Screen
-        name="Produck"
-        component={Produck}
+        name="Beranda"
+        component={Beranda}
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => {
@@ -28,8 +28,8 @@ const MenuTab = () => {
         }}
       />
       <Stack.Screen
-        name="Beranda"
-        component={Beranda}
+        name="Produck"
+        component={Produck}
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => {
