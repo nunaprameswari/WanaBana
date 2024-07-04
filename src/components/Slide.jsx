@@ -64,6 +64,15 @@ const Slide = () => {
         horizontal={true}
         pagingEnabled={true}
       />
+
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'center',
+          marginTop: -20,
+        }}>
+        {DotPicture()}
+      </View>
     </View>
   );
 };
