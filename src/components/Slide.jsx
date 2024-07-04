@@ -11,8 +11,21 @@ import React, {useEffect, useRef, useState} from 'react';
 
 const Slide = () => {
   const ListRef = useRef();
+
   const screenWidth = Dimensions.get('window').width;
+
   const [Actived, setActived] = useState(0);
+
+  useEffect(() => {
+    let interval = setInterval(() => {
+      if (Actived === DataPicture.length - 1) {
+        ListRef.current.scrollToIndex({
+          index: 0,
+          animation: true,
+        });
+      }
+    });
+  });
 
   const DataPicture = [
     {
