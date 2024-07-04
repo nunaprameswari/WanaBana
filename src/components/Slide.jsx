@@ -2,6 +2,7 @@ import {
   Dimensions,
   FlatList,
   Image,
+  StatusBar,
   StyleSheet,
   Text,
   View,
@@ -39,13 +40,22 @@ const Slide = () => {
     );
   };
 
+  const ScrollAutomatic = event => {
+    const posisiScroll = event.nativeEvent.contentOffset.x;
+    console.log({posisiScroll});
+    const index = posisiScroll / screenWidth;
+    console.log({index});
+
+    setActived(index);
+  };
+
   const DotPicture = () => {
     return DataPicture.map((dot, index) => {
       if (Actived === index) {
         return (
           <View
             style={{
-              backgroundColor: 'grey',
+              backgroundColor: 'black',
               height: 10,
               width: 10,
               borderRadius: 5,
@@ -58,7 +68,7 @@ const Slide = () => {
           <View
             key={index}
             style={{
-              backgroundColor: 'red',
+              backgroundColor: '#f7d200f8',
               height: 10,
               width: 10,
               borderRadius: 5,
@@ -71,11 +81,13 @@ const Slide = () => {
   };
   return (
     <View>
+      <StatusBar hidden={false} backgroundColor={pictureItem} />
       <FlatList
         data={DataPicture}
         renderItem={pictureItem}
         horizontal={true}
         pagingEnabled={true}
+        onScroll={ScrollAutomatic}
       />
 
       <View
