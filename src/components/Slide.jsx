@@ -53,6 +53,19 @@ const Slide = () => {
             }}
           />
         );
+      } else {
+        return (
+          <View
+            key={index}
+            style={{
+              backgroundColor: 'red',
+              height: 10,
+              width: 10,
+              borderRadius: 5,
+              marginHorizontal: 6,
+            }}
+          />
+        );
       }
     });
   };
