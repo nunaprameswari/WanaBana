@@ -23,8 +23,13 @@ const Slide = () => {
           index: 0,
           animation: true,
         });
+      } else {
+        ListRef.current.scrollToIndex({
+          index: Actived + 1,
+          animation: true,
+        })
       }
-    });
+    }, 2000);
   });
 
   const DataPicture = [
