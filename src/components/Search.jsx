@@ -8,7 +8,7 @@ const Search = ({icon, placeholder}) => {
       <Icon name="search" size={20} color="black" />
       <TextInput
         style={{
-          color: 'black',
+          color: '#808080',
           paddingLeft: 8,
           fontSize: 16,
           paddingVertical: -10,

@@ -6,6 +6,11 @@ const Produck = () => {
   return (
     <SafeAreaView style={{flex: 1, marginHorizontal: 16}}>
       <Search icon="search" placeholder={'Search produck'} />
+      <View>
+        <Text style={{fontSize: 25, fontWeight: 'bold', color: 'black'}}>
+          Wana Bana
+        </Text>
+      </View>
     </SafeAreaView>
   );
 };
