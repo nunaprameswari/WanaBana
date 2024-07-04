@@ -5,7 +5,7 @@ import Search from '../components/Search';
 const Produck = () => {
   return (
     <SafeAreaView style={{flex: 1, marginHorizontal: 16}}>
-      <Search icon="search" placeholder={'enter produck'} />
+      <Search icon="search" placeholder={'Search produck'} />
     </SafeAreaView>
   );
 };

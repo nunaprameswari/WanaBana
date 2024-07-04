@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import React from 'react';
 
@@ -6,7 +6,15 @@ const Search = ({icon, placeholder}) => {
   return (
     <View style={styles.search}>
       <Icon name="search" size={20} color="black" />
-      <Text style={{color: 'black'}}>{placeholder}</Text>
+      <TextInput
+        style={{
+          color: 'black',
+          paddingLeft: 8,
+          fontSize: 16,
+          paddingVertical: -10,
+        }}>
+        {placeholder}
+      </TextInput>
     </View>
   );
 };
