@@ -10,6 +10,7 @@ import {
 import React, {useEffect, useRef, useState} from 'react';
 
 const Slide = () => {
+  const ListRef = useRef();
   const screenWidth = Dimensions.get('window').width;
   const [Actived, setActived] = useState(0);
 
@@ -84,7 +85,9 @@ const Slide = () => {
       <StatusBar hidden={false} backgroundColor={pictureItem} />
       <FlatList
         data={DataPicture}
+        ref={ListRef}
         renderItem={pictureItem}
+        keyExtractor={item => item.id}
         horizontal={true}
         pagingEnabled={true}
         onScroll={ScrollAutomatic}
