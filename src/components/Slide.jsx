@@ -61,7 +61,7 @@ const Slide = () => {
         <Image
           source={item.image}
           resizeMode="cover"
-          style={{height: 200, width: screenWidth}}
+          style={{height: 250, width: screenWidth}}
         />
       </View>
     );
@@ -108,7 +108,11 @@ const Slide = () => {
   };
   return (
     <View>
-      <StatusBar hidden={false} backgroundColor={pictureItem} />
+      <StatusBar
+        barStyle="light-content"
+        translucent
+        backgroundColor="rgba(0,0,0,0)"
+      />
       <FlatList
         data={DataPicture}
         ref={ListRef}
