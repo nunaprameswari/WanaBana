@@ -1,12 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Search from '../components/Search';
 
 const Produck = () => {
   return (
-    <View>
+    <SafeAreaView style={{flex: 1, marginHorizontal: 16}}>
       <Search icon="search" placeholder={'enter produck'} />
-    </View>
+    </SafeAreaView>
   );
 };
 

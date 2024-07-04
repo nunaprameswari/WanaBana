@@ -17,7 +17,7 @@ const MenuTab = () => {
         name="Beranda"
         component={Beranda}
         options={{
-          headerShown: false,
+          headerShown: false, 
           tabBarIcon: ({size, color}) => {
             return (
               <View>
@@ -35,7 +35,7 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <Icon name="sale" size={size} color={color} />
+                <Icon name="tas" size={size} color={color} />
               </View>
             );
           },

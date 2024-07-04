@@ -5,7 +5,8 @@ import React from 'react';
 const Search = ({icon, placeholder}) => {
   return (
     <View style={styles.search}>
-      <Text style={{color: 'black'}}>search</Text>
+      <Icon name="search" size={20} color="black" />
+      <Text style={{color: 'black'}}>{placeholder}</Text>
     </View>
   );
 };
@@ -19,8 +20,11 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     borderRadius: 8,
     paddingHorizontal: 16,
-    marginVertical: 30,
-    shadowColor: 'black',
+    marginVertical: 16,
+    shadowColor: '#000',
     shadowOffset: {width: 0, height: 4},
+    shadowOpacity: 0.1,
+    shadowRadius: 7,
+    marginTop: 45,
   },
 });
