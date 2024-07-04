@@ -5,7 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Produck from '../screens/Produck';
 import Beranda from '../screens/Beranda';
-import Akun from '../screens/Akun';
+import Profile from '../screens/Profile';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -42,8 +42,8 @@ const MenuTab = () => {
         }}
       />
       <Tabs.Screen
-        name="Akun"
-        component={Akun}
+        name="Profile"
+        component={Profile}
         options={{
           headerShown: false,
           tabBarIcon: ({size, color}) => {
