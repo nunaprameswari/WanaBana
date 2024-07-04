@@ -1,6 +1,7 @@
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Search from '../components/Search';
+import ListProduct from './ListProduct';
 
 const Produck = () => {
   return (
@@ -11,6 +12,7 @@ const Produck = () => {
           Wana Bana
         </Text>
       </View>
+      <ListProduct />
     </SafeAreaView>
   );
 };
