@@ -38,9 +38,22 @@ const Slide = () => {
       </View>
     );
   };
+
+  const DotPicture = () => {
+    return DataPicture.map((dot, index) => {
+      if (Actived === index) {
+        return <View style={{backgroundColor: 'grey', height: 10}} />;
+      }
+    });
+  };
   return (
     <View>
-      <FlatList data={DataPicture} renderItem={pictureItem} />
+      <FlatList
+        data={DataPicture}
+        renderItem={pictureItem}
+        horizontal={true}
+        pagingEnabled={true}
+      />
     </View>
   );
 };
