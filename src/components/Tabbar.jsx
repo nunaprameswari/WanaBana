@@ -21,7 +21,7 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <MaterialCommunityIcons name="cog" size={size} color={color} />
+                <MaterialCommunityIcons name="home" size={size} color={color} />
               </View>
             );
           },
@@ -35,7 +35,7 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <MaterialCommunityIcons name="cog" size={size} color={color} />
+                <MaterialCommunityIcons name="sale" size={size} color={color} />
               </View>
             );
           },
@@ -49,7 +49,11 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <MaterialCommunityIcons name="cog" size={size} color={color} />
+                <MaterialCommunityIcons
+                  name="account"
+                  size={size}
+                  color={color}
+                />
               </View>
             );
           },
