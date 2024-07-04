@@ -27,9 +27,17 @@ const Slide = () => {
         ListRef.current.scrollToIndex({
           index: Actived + 1,
           animation: true,
-        })
+        });
       }
     }, 2000);
+
+    return () => clearInterval(interval);
+  });
+
+  const LayoutGambar = (data, index) => ({
+    length: screenWidth,
+    offset: screenWidth * index,
+    index: index,
   });
 
   const DataPicture = [
@@ -104,6 +112,7 @@ const Slide = () => {
       <FlatList
         data={DataPicture}
         ref={ListRef}
+        getItemLayout={LayoutGambar}
         renderItem={pictureItem}
         keyExtractor={item => item.id}
         horizontal={true}
