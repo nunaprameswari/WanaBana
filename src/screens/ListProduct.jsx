@@ -1,6 +1,12 @@
-import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import React from 'react';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const ListProduct = () => {
   const ListMenuProduct = [
@@ -42,7 +48,7 @@ const ListProduct = () => {
     },
   ];
   return (
-    <View>
+    <ScrollView>
       <FlatList
         data={ListMenuProduct}
         renderItem={({item}) => (
@@ -50,18 +56,26 @@ const ListProduct = () => {
             <Image
               source={item.image}
               style={{
-                width: 150,
-                height: 150,
+                width: 100,
+                height: 100,
                 resizeMode: 'center',
                 borderRadius: 15,
+                paddingHorizontal: 80,
               }}
             />
             <Text style={{color: 'black'}}>{item.name}</Text>
+            <View>
+              <Text style={{color: 'black', flexDirection: 'row'}}>
+                {item.harga}
+              </Text>
+            </View>
           </View>
         )}
         numColumns={2}
+        columnWrapperStyle={{justifyContent: 'center'}}
+        showsVerticalScrollIndicator={false}
       />
-    </View>
+    </ScrollView>
   );
 };
 
@@ -69,15 +83,15 @@ export default ListProduct;
 
 const styles = StyleSheet.create({
   List: {
-    backgroundColor: Colors.COLOR_LIGHT,
+    backgroundColor: '#fff',
     shadowColor: '#000',
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 0.1,
+    shadowOffset: {width: 2, height: 4},
+    shadowOpacity: 0.5,
     shadowRadius: 7,
-    borderRadius: 16,
-    marginVertical: 16,
+    borderRadius: 10,
+    marginVertical: 10,
     alignItems: 'center',
-    paddingHorizontal: 8,
+    paddingHorizontal: 38,
     paddingVertical: 26,
   },
 });
