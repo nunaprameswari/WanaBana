@@ -42,7 +42,17 @@ const Slide = () => {
   const DotPicture = () => {
     return DataPicture.map((dot, index) => {
       if (Actived === index) {
-        return <View style={{backgroundColor: 'grey', height: 10}} />;
+        return (
+          <View
+            style={{
+              backgroundColor: 'grey',
+              height: 10,
+              width: 10,
+              borderRadius: 5,
+              marginHorizontal: 6,
+            }}
+          />
+        );
       }
     });
   };
