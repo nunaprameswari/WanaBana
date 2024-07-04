@@ -47,10 +47,19 @@ const ListProduct = () => {
         data={ListMenuProduct}
         renderItem={({item}) => (
           <View style={styles.List}>
-            <Image source={item.image} />
+            <Image
+              source={item.image}
+              style={{
+                width: 150,
+                height: 150,
+                resizeMode: 'center',
+                borderRadius: 15,
+              }}
+            />
             <Text style={{color: 'black'}}>{item.name}</Text>
           </View>
         )}
+        numColumns={2}
       />
     </View>
   );
@@ -68,5 +77,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     marginVertical: 16,
     alignItems: 'center',
+    paddingHorizontal: 8,
+    paddingVertical: 26,
   },
 });
