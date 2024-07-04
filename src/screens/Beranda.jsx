@@ -8,7 +8,6 @@ const Beranda = () => {
     <View>
       <SafeAreaView>
         <Slide />
-        <Search />
       </SafeAreaView>
     </View>
   );
@@ -16,12 +15,4 @@ const Beranda = () => {
 
 export default Beranda;
 
-const styles = StyleSheet.create({
-  search: {
-    backgroundColor: 'fff',
-    marginTop: -255,
-    marginLeft: 10,
-    borderRadius: 5,
-    flexDirection: 'row',
-  },
-});
+const styles = StyleSheet.create({});

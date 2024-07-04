@@ -1,10 +1,11 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import Search from '../components/Search';
 
 const Produck = () => {
   return (
     <View>
-      <Text>Produck</Text>
+      <Search icon="search" placeholder={'enter produck'} />
     </View>
   );
 };

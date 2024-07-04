@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Produck from '../screens/Produck';
 import Beranda from '../screens/Beranda';
 import Profile from '../screens/Profile';
@@ -21,7 +21,7 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <MaterialCommunityIcons name="home" size={size} color={color} />
+                <Icon name="home" size={size} color={color} />
               </View>
             );
           },
@@ -35,7 +35,7 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <MaterialCommunityIcons name="sale" size={size} color={color} />
+                <Icon name="sale" size={size} color={color} />
               </View>
             );
           },
@@ -49,11 +49,7 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <MaterialCommunityIcons
-                  name="account"
-                  size={size}
-                  color={color}
-                />
+                <Icon name="account" size={size} color={color} />
               </View>
             );
           },

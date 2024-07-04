@@ -1,13 +1,10 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Akun from '../components/Akun';
 
 const Profile = () => {
   return (
     <View>
-      <SafeAreaView>
-        <Akun />
-      </SafeAreaView>
+      <Text>Profile</Text>
     </View>
   );
 };

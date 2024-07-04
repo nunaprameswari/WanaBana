@@ -5,7 +5,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import BackgroundLoading from './components/BackgroundLoading';
-import Produck from './screens/Produck';
 import Tabbar from './components/Tabbar';
 
 const Stack = createNativeStackNavigator();
