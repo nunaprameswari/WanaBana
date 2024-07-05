@@ -32,8 +32,18 @@ const DetailProduct = ({navigation, route}) => {
         <Text style={{color: 'black', marginTop: 10, fontSize: 40}}>
           {item.name}
         </Text>
-        <Text style={{color: 'black', marginLeft: -200, marginVertical: 16, fontSize: 40}}>{item.harga}</Text>
-        <Text style={{color: 'black', marginVertical: 16}}>{item.description}</Text>
+        <Text
+          style={{
+            color: 'black',
+            marginLeft: -200,
+            marginVertical: 16,
+            fontSize: 40,
+          }}>
+          {item.harga}
+        </Text>
+        <Text style={{color: 'black', marginVertical: 16}}>
+          {item.description}
+        </Text>
       </View>
     </View>
   );

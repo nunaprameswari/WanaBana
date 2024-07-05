@@ -1,18 +1,36 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+  FlatList,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import React from 'react';
 import Slide from '../components/Slide';
-import Search from '../components/Search';
+import IconList from '../screens/IconList';
 
 const Beranda = () => {
   return (
-    <View>
+    <ScrollView>
       <SafeAreaView>
         <Slide />
       </SafeAreaView>
-    </View>
+      <View>
+        <Text style={{fontSize: 40, backgroundColor: 'white'}}>jcj</Text>
+      </View>
+      <IconList />
+    </ScrollView>
   );
 };
 
 export default Beranda;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  BgdBeranda: {
+    backgroundColor: '#fff',
+    flex: 1,
+    marginTop: -30,
+    height: 10,
+  },
+});
