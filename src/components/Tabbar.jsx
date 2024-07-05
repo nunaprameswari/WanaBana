@@ -49,7 +49,7 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <Icon name="account" size={size} color={color} />
+                <Icon name="akun" size={size} color={color} />
               </View>
             );
           },

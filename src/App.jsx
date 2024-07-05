@@ -6,6 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import BackgroundLoading from './components/BackgroundLoading';
 import Tabbar from './components/Tabbar';
+import DetailProduct from './screens/DetailProduct';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -16,6 +17,7 @@ const App = () => {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="BackgroundLoading" component={BackgroundLoading} />
         <Stack.Screen name="Tabbar" component={Tabbar} />
+        <Stack.Screen name="DetailProduct" component={DetailProduct} />
       </Stack.Navigator>
     </NavigationContainer>
   );

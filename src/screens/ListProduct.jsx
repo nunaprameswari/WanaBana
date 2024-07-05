@@ -5,10 +5,14 @@ import {
   StyleSheet,
   Text,
   View,
+  Pressable,
 } from 'react-native';
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
 
 const ListProduct = () => {
+  const Navigation = useNavigation();
+
   const ListMenuProduct = [
     {
       id: '01',
@@ -52,24 +56,23 @@ const ListProduct = () => {
       <FlatList
         data={ListMenuProduct}
         renderItem={({item}) => (
-          <View style={styles.List}>
+          <Pressable
+            onPress={() => Navigation.navigate('DetailProduct')}
+            style={styles.List}>
             <Image
               source={item.image}
               style={{
-                width: 100,
-                height: 100,
+                width: 150,
+                height: 150,
                 resizeMode: 'center',
                 borderRadius: 15,
-                paddingHorizontal: 80,
               }}
             />
             <Text style={{color: 'black'}}>{item.name}</Text>
-            <View>
-              <Text style={{color: 'black', flexDirection: 'row'}}>
-                {item.harga}
-              </Text>
+            <View style={{flexDirection: 'row', marginTop: 8}}>
+              <Text style={{color: 'black'}}>{item.harga}</Text>
             </View>
-          </View>
+          </Pressable>
         )}
         numColumns={2}
         columnWrapperStyle={{justifyContent: 'center'}}
@@ -83,15 +86,15 @@ export default ListProduct;
 
 const styles = StyleSheet.create({
   List: {
-    backgroundColor: '#fff',
     shadowColor: '#000',
-    shadowOffset: {width: 2, height: 4},
+    shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.5,
     shadowRadius: 7,
     borderRadius: 10,
     marginVertical: 10,
     alignItems: 'center',
-    paddingHorizontal: 38,
+    paddingHorizontal: 8,
     paddingVertical: 26,
+    marginTop: 8,
   },
 });
