@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     flex: 1,
     marginTop: 0,
-    height: 200,
+    height: 150,
   },
 });
