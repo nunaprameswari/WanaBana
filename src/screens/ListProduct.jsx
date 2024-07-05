@@ -19,6 +19,12 @@ const ListProduct = () => {
       name: 'Banana Milk',
       image: require('../assets/images/Banana_Milk.jpg'),
       harga: 'Rp 8.000',
+      description: [
+        'Banana Milk minuman ala Korea No. 1 di Indonesia,',
+        'minuman pisang yang dicampur dengan toping puding yang lembut,',
+        'packaging yang keninian dan sudah ada di beberapa kota termasuk Pamekasan,',
+        'Jl. Pademawu, Ds. Durbuk',
+      ],
     },
     {
       id: '02',
@@ -37,6 +43,8 @@ const ListProduct = () => {
       name: 'Banana Puding',
       image: require('../assets/images/Banana_Puding.jpg'),
       harga: 'Rp 9.000',
+      description:
+        'Banana Puding minuman ala Korea No. 1 di Indonesia, minuman pisang yang dicampur dengan toping puding yang lembut, packaging yang keninian dan sudah ada di beberapa kota termasuk Pamekasan, Jl. Pademawu, Ds. Durbuk',
     },
     {
       id: '05',

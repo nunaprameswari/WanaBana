@@ -16,7 +16,7 @@ const DetailProduct = ({navigation, route}) => {
   console.log(item);
 
   return (
-    <View>
+    <View style={{flex: 1}}>
       <SafeAreaView>
         <Image source={item.image} style={styles.image} />
         <Pressable onPress={() => navigation.goBack()}>
@@ -28,7 +28,13 @@ const DetailProduct = ({navigation, route}) => {
           />
         </Pressable>
       </SafeAreaView>
-      <View style={styles.BgdDetail} />
+      <View style={styles.BgdDetail}>
+        <Text style={{color: 'black', marginTop: 10, fontSize: 40}}>
+          {item.name}
+        </Text>
+        <Text style={{color: 'black', marginLeft: -200, marginVertical: 16, fontSize: 40}}>{item.harga}</Text>
+        <Text style={{color: 'black', marginVertical: 16}}>{item.description}</Text>
+      </View>
     </View>
   );
 };
@@ -39,10 +45,11 @@ const styles = StyleSheet.create({
   BgdDetail: {
     backgroundColor: '#fff',
     flex: 1,
-    marginTop: 140,
-    borderTopLeftRadius: 56,
-    borderTopRightRadius: 56,
+    marginTop: -130,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
     alignItems: 'center',
+    paddingHorizontal: 16,
   },
   image: {
     width: 370,
