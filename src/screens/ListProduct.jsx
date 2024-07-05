@@ -57,7 +57,7 @@ const ListProduct = () => {
         data={ListMenuProduct}
         renderItem={({item}) => (
           <Pressable
-            onPress={() => Navigation.navigate('DetailProduct')}
+            onPress={() => Navigation.navigate('DetailProduct', {item: item})}
             style={styles.List}>
             <Image
               source={item.image}
