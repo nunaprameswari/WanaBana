@@ -1,9 +1,18 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, SafeAreaView} from 'react-native';
 import React from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const DetailProduct = () => {
   return (
     <View style={styles.Bgd}>
+      <SafeAreaView>
+        <Icon
+          name={'arrow-circle-left'}
+          size={28}
+          color="white"
+          style={styles.icon}
+        />
+      </SafeAreaView>
       <View style={styles.BgdDetail}>
         <View style={styles.Screen}>
           <Image
@@ -26,7 +35,7 @@ const styles = StyleSheet.create({
   BgdDetail: {
     backgroundColor: '#fff',
     flex: 1,
-    marginTop: 240,
+    marginTop: 140,
     borderTopLeftRadius: 56,
     borderTopRightRadius: 56,
     alignItems: 'center',
@@ -42,5 +51,10 @@ const styles = StyleSheet.create({
     width: 400,
     height: 400,
     resizeMode: 'contain',
+  },
+  icon: {
+    //paddingHorizontal: 8,
+    paddingVertical: 39,
+    marginLeft: 10,
   },
 });
