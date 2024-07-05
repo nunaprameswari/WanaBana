@@ -1,17 +1,26 @@
-import {StyleSheet, Text, View, Image, SafeAreaView} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  SafeAreaView,
+  Pressable,
+} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const DetailProduct = () => {
+const DetailProduct = ({navigation}) => {
   return (
     <View style={styles.Bgd}>
       <SafeAreaView>
-        <Icon
-          name={'arrow-circle-left'}
-          size={28}
-          color="white"
-          style={styles.icon}
-        />
+        <Pressable onPress={() => navigation.goBack()}>
+          <Icon
+            name={'arrow-circle-left'}
+            size={28}
+            color="white"
+            style={styles.icon}
+          />
+        </Pressable>
       </SafeAreaView>
       <View style={styles.BgdDetail}>
         <View style={styles.Screen}>
