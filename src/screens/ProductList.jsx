@@ -10,7 +10,6 @@ import {
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
-import ListProduct from '../screens/ListProduct';
 
 const ListMenuProduct = [
   {
@@ -59,7 +58,7 @@ const ListMenuProduct = [
   },
 ];
 
-const VideoList = () => {
+const ProductList = () => {
   const Navigation = useNavigation();
 
   return (
@@ -74,7 +73,7 @@ const VideoList = () => {
           }}>
           PRODUK
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => Navigation.navigate('Produck')}>
           <Text
             style={{
               fontSize: 20,
@@ -86,13 +85,13 @@ const VideoList = () => {
             }}>
             Lihat Semua
           </Text>
-          </TouchableOpacity>
-            <Icon
-              name={'chevron-right'}
-              size={20}
-              color="#201e1e70"
-              style={styles.icon}
-            />
+        </TouchableOpacity>
+        <Icon
+          name={'chevron-right'}
+          size={20}
+          color="#201e1e70"
+          style={styles.icon}
+        />
       </View>
       <FlatList
         horizontal
@@ -126,7 +125,7 @@ const VideoList = () => {
   );
 };
 
-export default VideoList;
+export default ProductList;
 
 const styles = StyleSheet.create({
   container: {
@@ -137,7 +136,7 @@ const styles = StyleSheet.create({
   List: {
     borderWidth: 1,
     marginLeft: 6,
-    borderColor: 'blue',
+    borderColor: '#201e1e70',
   },
   icon: {
     //paddingHorizontal: 8,

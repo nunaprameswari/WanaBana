@@ -9,8 +9,8 @@ import {
 import React from 'react';
 import Slide from '../components/Slide';
 import IconList from '../screens/IconList';
-import Video from '../components/VideoList';
-import VideoList from '../components/VideoList';
+import ProductList from '../screens/ProductList';
+import Rekomendation from './Rekomendation';
 
 const Beranda = () => {
   return (
@@ -22,7 +22,8 @@ const Beranda = () => {
         <Text style={{fontSize: 40, backgroundColor: 'white'}}>jcj</Text>
       </View>
       <IconList />
-      <VideoList />
+      <Rekomendation />
+      <ProductList />
     </ScrollView>
   );
 };
