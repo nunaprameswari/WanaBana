@@ -3,8 +3,8 @@ import React from 'react';
 import Icon from '../components/Icon';
 
 const Data = [
-  {id: 1, label: 'Top Up'},
-  {id: 2, label: 'Diskon'},
+  {id: 1, label: 'Pusla dan Tagihan'},
+  {id: 2, label: 'Bank'},
   {id: 3, label: 'Gofood'},
   {id: 4, label: 'Go Pay'},
   {id: 5, label: 'Kambing'},
@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     flex: 1,
     marginTop: 0,
-    height: 150,
+    height: 180,
   },
 });

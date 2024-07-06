@@ -54,6 +54,18 @@ const VideoList = () => {
 
   return (
     <View style={styles.container}>
+      <View style={{flexDirection: 'row'}}>
+        <Text style={{fontSize: 60, color: 'red'}}>PRODUK</Text>
+        <Text
+          style={{
+            fontSize: 20,
+            color: 'red',
+            paddingVertical: 15,
+            marginLeft: 89,
+          }}>
+          View All
+        </Text>
+      </View>
       <FlatList
         horizontal
         data={ListMenuProduct}
@@ -87,16 +99,7 @@ export default VideoList;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 50,
-  },
-  item: {
-    backgroundColor: '#f9c2ff',
-    padding: 50,
-    marginVertical: 18,
-    marginHorizontal: 26,
-    width: 10, // Adjust width as needed
-  },
-  text: {
-    fontSize: 20,
+    marginTop: 10,
+    backgroundColor: '#fff',
   },
 });
