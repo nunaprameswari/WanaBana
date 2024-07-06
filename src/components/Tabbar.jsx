@@ -3,6 +3,12 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {
+  faHouseChimneyWindow,
+  faBagShopping,
+  faNewspaper,
+} from '@fortawesome/free-solid-svg-icons';
 import Produck from '../screens/Produck';
 import Beranda from '../screens/Beranda';
 import Profile from '../screens/Profile';
@@ -21,7 +27,11 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <Icon name="home" size={size} color={color} />
+                <FontAwesomeIcon
+                  icon={faHouseChimneyWindow}
+                  size={size}
+                  color={color}
+                />
               </View>
             );
           },
@@ -35,7 +45,11 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <Icon name="tas" size={size} color={color} />
+                <FontAwesomeIcon
+                  icon={faBagShopping}
+                  size={size}
+                  color={color}
+                />
               </View>
             );
           },
@@ -49,7 +63,7 @@ const MenuTab = () => {
           tabBarIcon: ({size, color}) => {
             return (
               <View>
-                <Icon name="akun" size={size} color={color} />
+                <FontAwesomeIcon icon={faNewspaper} size={size} color={color} />
               </View>
             );
           },
