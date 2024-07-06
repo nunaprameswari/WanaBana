@@ -17,50 +17,44 @@ const Rekomendation = ({route}) => {
     {
       id: '01',
       name: 'Strawberry',
+      topping: 'Topping Cookies',
       image: require('../assets/images/Strawberry.jpg'),
       harga: 'Rp 8.000',
-      description: [
-        'Banana Milk minuman ala Korea No. 1 di Indonesia,',
-        'minuman pisang yang dicampur dengan toping puding yang lembut,',
-        'packaging yang keninian dan sudah ada di beberapa kota termasuk Pamekasan,',
-        'Jl. Pademawu, Ds. Durbuk',
-      ],
-      terjual: '10 terjual',
     },
     {
       id: '02',
       name: 'Choco Banana',
+      topping: 'Topping Pisang',
       image: require('../assets/images/Choco_Banana.jpg'),
       harga: 'Rp 10.000',
-      terjual: '40 terjual',
     },
     {
       id: '03',
       name: 'Banana Cream',
+      topping: 'Cream Keju',
       image: require('../assets/images/Banana_Cream.jpg'),
       harga: 'Rp 8.000',
-      terjual: '61 terjual',
     },
     {
       id: '04',
       name: 'Banana Puding',
+      topping: 'Topping Puding',
       image: require('../assets/images/Banana_Puding.jpg'),
       harga: 'Rp 9.000',
-      terjual: '50 terjual',
     },
     {
       id: '05',
       name: 'Chocolate',
+      topping: 'Coklat Susu',
       image: require('../assets/images/Chocolate.jpg'),
       harga: 'Rp 10.000',
-      terjual: '8 terjual',
     },
     {
       id: '06',
       name: 'Choco Peanut Banana',
+      topping: 'Topping Kacang',
       image: require('../assets/images/Choco_Peanut_Banana.jpg'),
       harga: 'Rp 10.000',
-      terjual: '63 terjual',
     },
   ];
   return (
@@ -90,12 +84,31 @@ const Rekomendation = ({route}) => {
                 //borderRadius: 15,
               }}
             />
-            <Text style={{color: 'black'}}>{item.name}</Text>
-            <View style={{flexDirection: 'row', marginTop: 8}}>
-              <Text style={{color: 'black'}}>{item.harga}</Text>
+            <View style={{alignItems: 'center', justifyContent: 'center'}}>
+              <Text
+                style={{
+                  color: 'black',
+                  top: 5,
+                  fontWeight: 'bold',
+                }}>
+                {item.name}
+              </Text>
             </View>
-            <View style={{flexDirection: 'row', marginTop: 8}}>
-              <Text style={{color: 'black'}}>{item.terjual}</Text>
+            <View style={{alignItems: 'center', justifyContent: 'center'}}>
+              <Text style={{color: 'black', fontWeight: 'bold', top: 7}}>
+                {item.topping}
+              </Text>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginTop: 8,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Text style={{color: 'red', top: 20, fontSize: 20}}>
+                {item.harga}
+              </Text>
             </View>
           </Pressable>
         )}
@@ -112,9 +125,9 @@ export default Rekomendation;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 10,
+    marginTop: 15,
     backgroundColor: 'white',
-    height: 400,
+    height: 450,
   },
   List: {
     //shadowColor: '#000',
@@ -123,12 +136,13 @@ const styles = StyleSheet.create({
     //shadowRadius: 9,
     marginLeft: 3,
     marginRight: 3,
+    height: 185,
     //borderRadius: 10,
     //marginVertical: 10,
     //alignItems: 'center',
     //paddingHorizontal: 8,
     //paddingVertical: 26,
     marginTop: 8,
-    borderWidth: 1,
+    //borderWidth: 1,
   },
 });

@@ -1,5 +1,5 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faCamera, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 
