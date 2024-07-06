@@ -26,7 +26,7 @@ export default IconList;
 
 const styles = StyleSheet.create({
   BgdBeranda: {
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     flex: 1,
     marginTop: 0,
     height: 180,

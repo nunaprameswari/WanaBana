@@ -61,16 +61,16 @@ const Rekomendation = ({route}) => {
   ];
   return (
     <View style={styles.container}>
-        <Text
-          style={{
-            fontSize: 30,
-            color: '#8a0505',
-            fontWeight: 'bold',
-            paddingVertical: 10,
-            marginLeft: 100,
-          }}>
-          Produk Terlaris
-        </Text>
+      <Text
+        style={{
+          fontSize: 30,
+          color: '#c40404',
+          fontWeight: 'bold',
+          paddingVertical: 10,
+          marginLeft: 100,
+        }}>
+        Produk Terlaris
+      </Text>
       <FlatList
         data={ListMenuProduct}
         renderItem={({item}) => (
@@ -103,12 +103,12 @@ const Rekomendation = ({route}) => {
 export default Rekomendation;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginTop: 10,
-        backgroundColor: '#fff',
-        height: 380,
-      },
+  container: {
+    flex: 1,
+    marginTop: 10,
+    backgroundColor: 'white',
+    height: 380,
+  },
   List: {
     //shadowColor: '#000',
     //shadowOffset: {width: 0, height: 4},
