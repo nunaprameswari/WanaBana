@@ -1,7 +1,16 @@
-import {FlatList, Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
+import ListProduct from '../screens/ListProduct';
 
 const ListMenuProduct = [
   {
@@ -65,17 +74,25 @@ const VideoList = () => {
           }}>
           PRODUK
         </Text>
-        <Text
-          style={{
-            fontSize: 20,
-            color: '#201e1e70',
-            paddingVertical: 15,
-            marginLeft: 150,
-            fontStyle: 'italic',
-          }}>
-          Lihat Semua
-        </Text>
-        <Icon name={'chevron-right'} size={20} color="#201e1e70" style={styles.icon} />
+        <TouchableOpacity>
+          <Text
+            style={{
+              fontSize: 20,
+              color: '#201e1e70',
+              paddingVertical: 15,
+              marginLeft: 150,
+              //marginRight: 5,
+              fontStyle: 'italic',
+            }}>
+            Lihat Semua
+          </Text>
+          </TouchableOpacity>
+            <Icon
+              name={'chevron-right'}
+              size={20}
+              color="#201e1e70"
+              style={styles.icon}
+            />
       </View>
       <FlatList
         horizontal
@@ -126,6 +143,7 @@ const styles = StyleSheet.create({
     //paddingHorizontal: 8,
     paddingVertical: 15,
     marginLeft: 5,
+    //marginHorizontal: 70,
     //top: -370,
   },
 });

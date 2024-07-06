@@ -10,7 +10,7 @@ import {
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 
-const ListProduct = () => {
+const ListProduct = ({route}) => {
   const Navigation = useNavigation();
 
   const ListMenuProduct = [
