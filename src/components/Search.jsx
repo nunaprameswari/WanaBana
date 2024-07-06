@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     //shadowOpacity: 0.1,
     //shadowRadius: 7,
     marginTop: 45,
-    top: -215,
+    top: -230,
   },
   icon: {
     marginLeft: 10,

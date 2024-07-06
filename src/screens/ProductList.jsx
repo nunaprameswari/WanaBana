@@ -17,12 +17,6 @@ const ListMenuProduct = [
     name: 'Banana Milk',
     image: require('../assets/images/Banana_Milk.jpg'),
     harga: 'Rp 8.000',
-    description: [
-      'Banana Milk minuman ala Korea No. 1 di Indonesia,',
-      'minuman pisang yang dicampur dengan toping puding yang lembut,',
-      'packaging yang keninian dan sudah ada di beberapa kota termasuk Pamekasan,',
-      'Jl. Pademawu, Ds. Durbuk',
-    ],
     terjual: '36 terjual',
   },
   {
@@ -100,20 +94,21 @@ const ProductList = () => {
       <View style={{flexDirection: 'row'}}>
         <Text
           style={{
-            fontSize: 30,
-            color: 'red',
+            fontSize: 25,
+            color: '#c40404',
             fontWeight: 'bold',
             paddingVertical: 10,
+            marginLeft: 6,
           }}>
           PRODUK
         </Text>
         <TouchableOpacity onPress={() => Navigation.navigate('Produck')}>
           <Text
             style={{
-              fontSize: 20,
+              fontSize: 15,
               color: '#201e1e70',
               paddingVertical: 15,
-              marginLeft: 150,
+              marginLeft: 185,
               //marginRight: 5,
               fontStyle: 'italic',
             }}>
@@ -142,14 +137,28 @@ const ProductList = () => {
                 resizeMode: 'center',
                 //borderRadius: 35,
                 //marginHorizontal: 7,
+                //top: -5,
               }}
             />
-            <Text style={{color: 'black', paddingVertical: 10}}>
+            <Text
+              style={{
+                color: 'black',
+                flexDirection: 'row',
+                paddingVertical: 5,
+                marginLeft: 3,
+              }}>
               {item.name}
             </Text>
             <View style={{flexDirection: 'row', marginTop: 8}}>
-              <Text style={{color: 'red', fontSize: 20, top: -10}}>
+              <Text
+                style={{color: 'red', fontSize: 20, top: -5, marginLeft: 3}}>
                 {item.harga}
+              </Text>
+            </View>
+            <View style={{flexDirection: 'row', marginTop: 8}}>
+              <Text
+                style={{color: 'black', fontSize: 12, top: -5, marginLeft: 50}}>
+                {item.terjual}
               </Text>
             </View>
           </Pressable>
@@ -164,7 +173,7 @@ export default ProductList;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 10,
+    //marginTop: 0,
     backgroundColor: '#fff',
   },
   List: {
@@ -174,7 +183,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     //paddingHorizontal: 8,
-    paddingVertical: 15,
+    paddingVertical: 12,
     marginLeft: 5,
     //marginHorizontal: 70,
     //top: -370,

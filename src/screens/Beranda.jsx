@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import Slide from '../components/Slide';
-import IconList from '../screens/IconList';
+import Picture from './Picture';
 import ProductList from '../screens/ProductList';
 import Rekomendation from './Rekomendation';
 import Search from '../components/Search';
@@ -20,12 +20,9 @@ const Beranda = () => {
         <Slide />
         <Search icon="search" placeholder={'Search produck'} />
       </SafeAreaView>
-      <View>
-        <Text style={{fontSize: 40, backgroundColor: 'white'}}>jcj</Text>
-      </View>
-      <IconList />
-      <Rekomendation />
       <ProductList />
+      <Picture />
+      <Rekomendation />
     </ScrollView>
   );
 };
