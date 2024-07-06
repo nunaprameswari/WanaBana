@@ -1,12 +1,30 @@
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import ListProduct from './ListProduct';
 
 const Produck = () => {
   return (
-    <SafeAreaView style={{flex: 1, marginHorizontal: 16}}>
+    <SafeAreaView
+      style={{
+        flex: 1,
+        marginHorizontal: 0,
+        marginVertical: 35,
+      }}>
       <View>
-        <Text style={{fontSize: 25, fontWeight: 'bold', color: 'black'}}>
+        <StatusBar
+          barStyle="light-content"
+          hidden={false}
+          backgroundColor="white"
+        />
+        <Text
+          style={{
+            fontSize: 35,
+            fontWeight: 'bold',
+            color: 'black',
+            backgroundColor: 'white',
+            width: 500,
+            paddingHorizontal: 7,
+          }}>
           Wana Bana
         </Text>
       </View>
