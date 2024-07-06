@@ -94,7 +94,7 @@ const ListProduct = ({route}) => {
     },
   ];
   return (
-    <ScrollView>
+    <ScrollView style={{backgroundColor: 'white', height: 500}}>
       <FlatList
         data={ListMenuProduct}
         renderItem={({item}) => (
@@ -104,15 +104,50 @@ const ListProduct = ({route}) => {
             <Image
               source={item.image}
               style={{
-                width: 150,
-                height: 150,
-                resizeMode: 'center',
-                borderRadius: 15,
+                width: 165,
+                height: 165,
+                borderRadius: 5,
+                marginLeft: -8,
+                marginRight: -8,
+                marginVertical: -2,
               }}
             />
-            <Text style={{color: 'black'}}>{item.name}</Text>
-            <View style={{flexDirection: 'row', marginTop: 8}}>
-              <Text style={{color: 'black'}}>{item.harga}</Text>
+            <View
+              style={{
+                backgroundColor: 'white',
+                width: 164,
+                marginLeft: -7,
+                marginRight: -9,
+                height: 25,
+              }}>
+              <Text
+                style={{
+                  color: 'black',
+                  fontSize: 17,
+                  marginLeft: 2,
+                  marginVertical: 3,
+                }}>
+                {item.name}
+              </Text>
+            </View>
+            <View
+              style={{
+                backgroundColor: 'white',
+                width: 164,
+                top: -3,
+                marginLeft: -7,
+                marginRight: -9,
+                borderRadius: 5,
+              }}>
+              <Text
+                style={{
+                  color: 'red',
+                  fontSize: 19,
+                  marginVertical: 8,
+                  marginLeft: 2,
+                }}>
+                {item.harga}
+              </Text>
             </View>
           </Pressable>
         )}
@@ -128,15 +163,13 @@ export default ListProduct;
 
 const styles = StyleSheet.create({
   List: {
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 0.5,
-    shadowRadius: 7,
-    borderRadius: 10,
-    marginVertical: 10,
-    alignItems: 'center',
+    borderRadius: 5,
+    marginVertical: 1,
     paddingHorizontal: 8,
-    paddingVertical: 26,
-    marginTop: 8,
+    paddingVertical: 2,
+    marginLeft: 4,
+    marginRight: 4,
+    marginTop: 5,
+    //borderWidth: 1,
   },
 });
