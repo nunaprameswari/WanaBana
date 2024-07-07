@@ -37,11 +37,20 @@ const DetailProduct = ({navigation, route}) => {
             color: 'black',
             marginLeft: -200,
             marginVertical: 16,
-            fontSize: 40,
+            fontSize: 30,
           }}>
           {item.harga}
         </Text>
-        <Text style={{color: 'black', marginVertical: 16}}>
+        <Text
+          style={{
+            color: 'black',
+            marginLeft: 180,
+            marginVertical: -16,
+            fontSize: 20,
+          }}>
+          {item.terjual}
+        </Text>
+        <Text style={{color: 'black', marginVertical: 30}}>
           {item.description}
         </Text>
       </View>

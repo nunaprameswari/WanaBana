@@ -11,14 +11,12 @@ import Slide from '../components/Slide';
 import Picture from './Picture';
 import ProductList from '../screens/ProductList';
 import Rekomendation from './Rekomendation';
-import Search from '../components/Search';
 
 const Beranda = () => {
   return (
     <ScrollView>
       <SafeAreaView>
         <Slide />
-        <Search icon="search" placeholder={'Search produck'} />
       </SafeAreaView>
       <ProductList />
       <Picture />

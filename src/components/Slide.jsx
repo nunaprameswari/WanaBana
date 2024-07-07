@@ -8,7 +8,6 @@ import {
   View,
 } from 'react-native';
 import React, {useEffect, useRef, useState} from 'react';
-import Search from './Search';
 
 const Slide = () => {
   const ListRef = useRef();
@@ -132,9 +131,6 @@ const Slide = () => {
           marginTop: -20,
         }}>
         {DotPicture()}
-      </View>
-      <View>
-        <Search />
       </View>
     </View>
   );

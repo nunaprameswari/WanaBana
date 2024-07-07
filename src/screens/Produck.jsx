@@ -23,6 +23,7 @@ const Produck = () => {
             color: 'black',
             backgroundColor: 'white',
             width: 500,
+            height: 40,
             paddingHorizontal: 7,
           }}>
           Wana Bana

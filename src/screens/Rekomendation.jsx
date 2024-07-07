@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 15,
     backgroundColor: 'white',
-    height: 450,
+    height: 500,
   },
   List: {
     //shadowColor: '#000',

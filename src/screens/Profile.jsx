@@ -33,18 +33,6 @@ const Profile = () => {
           source={require('../assets/images/Poster(2).jpg')}
           style={styles.ImgP}
         />
-        <View style={{alignItems: 'center', justifyContent: 'center'}}>
-          <Text
-            style={{
-              fontSize: 40,
-              borderWidth: 1,
-              backgroundColor: 'green',
-              top: -365,
-              width: 150,
-            }}>
-            WhatsApp
-          </Text>
-        </View>
       </View>
       <View style={{flexDirection: 'row'}}>
         <Image
@@ -100,7 +88,7 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     //marginLeft: 20,
-    top: -16,
+    //top: -6,
   },
   ImgO: {
     width: 360,
