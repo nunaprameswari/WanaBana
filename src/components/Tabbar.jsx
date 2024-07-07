@@ -17,19 +17,34 @@ const Tabs = createBottomTabNavigator();
 
 const MenuTab = () => {
   return (
-    <Tabs.Navigator>
+    <Tabs.Navigator
+      screenOptions={{
+        tabBarHideOnKeyboard: true,
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: 'white',
+          position: 'absolute',
+          //bottom: 3,
+          marginHorizontal: 9,
+          height: 50,
+          width: 340,
+          borderRadius: 10,
+          shadowColor: '#585353',
+        },
+      }}>
       <Tabs.Screen
         name="Beranda"
         component={Beranda}
         options={{
           headerShown: false,
-          tabBarIcon: ({size, color}) => {
+          tabBarIcon: ({focused}) => {
             return (
               <View>
                 <FontAwesomeIcon
                   icon={faHouseChimneyWindow}
-                  size={size}
-                  color={color}
+                  size={30}
+                  color={focused ? '#f7d200f8' : 'black'}
                 />
               </View>
             );
@@ -41,13 +56,14 @@ const MenuTab = () => {
         component={Produck}
         options={{
           headerShown: false,
-          tabBarIcon: ({size, color}) => {
+          tabBarIcon: ({focused}) => {
             return (
-              <View>
+              <View style={styles.boxicon}>
                 <FontAwesomeIcon
                   icon={faBagShopping}
-                  size={size}
-                  color={color}
+                  size={30}
+                  color={focused ? 'white' : 'black'}
+                  style={{marginLeft: 10, marginVertical: 7}}
                 />
               </View>
             );
@@ -59,10 +75,14 @@ const MenuTab = () => {
         component={Profile}
         options={{
           headerShown: false,
-          tabBarIcon: ({size, color}) => {
+          tabBarIcon: ({focused}) => {
             return (
               <View>
-                <FontAwesomeIcon icon={faNewspaper} size={size} color={color} />
+                <FontAwesomeIcon
+                  icon={faNewspaper}
+                  size={30}
+                  color={focused ? '#f7d200f8' : 'black'}
+                />
               </View>
             );
           },
@@ -86,4 +106,12 @@ function App() {
 
 export default App;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  boxicon: {
+    width: 50,
+    height: 50,
+    backgroundColor: '#f7d200f8',
+    borderRadius: 50,
+    marginTop: -30,
+  },
+});

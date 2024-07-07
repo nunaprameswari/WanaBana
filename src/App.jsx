@@ -25,4 +25,9 @@ const App = () => {
 
 export default App;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  box: {
+    position: 'absolute',
+    backgroundColor: 'black',
+  },
+});
