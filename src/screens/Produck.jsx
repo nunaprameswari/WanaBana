@@ -21,7 +21,7 @@ const Produck = () => {
             fontSize: 35,
             fontWeight: 'bold',
             color: 'black',
-            backgroundColor: 'white',
+            //backgroundColor: 'white',
             width: 500,
             height: 40,
             paddingHorizontal: 7,

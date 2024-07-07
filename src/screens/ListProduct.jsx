@@ -149,7 +149,7 @@ const ListProduct = ({route}) => {
     },
   ];
   return (
-    <ScrollView style={{backgroundColor: 'white', height: 450}}>
+    <ScrollView style={{height: 450, marginVertical: 10}}>
       <FlatList
         data={ListMenuProduct}
         renderItem={({item}) => (
